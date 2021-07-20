@@ -1,12 +1,18 @@
 import { connect } from 'react-redux'
 import ProfileComponent from '../components/ProfileComponent'
+import { addCar, removeCar} from '../redux folder/actions'
 
 const mapStateToProps = (state) =>{
     return {
-        helloJelly: state.hello,
-        cars: state.cars,
-        name: state.name
+        cars: state.cars
     }
 }
 
-export default connect(mapStateToProps)(ProfileComponent)
+const mapDispatchToProps = (dispatch) =>{
+    return {
+        addCar : (car) => dispatch(addCar(car)),
+        removeCar : (index) => dispatch(removeCar(index))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileComponent)

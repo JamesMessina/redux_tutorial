@@ -4,4 +4,4 @@ export default {
     user: null,
     name: "James V Messina",
     cars: ["model S", "modelT", "acura", "toyota", "honda"]
-}; 
+} 

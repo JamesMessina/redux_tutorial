@@ -12,16 +12,3 @@ export const removeCar = (index) => {
     }
 }
 
-export const setUser = (newUser) => {
-    return {
-        type: 'SET_USER',
-        value: newUser
-    }
-}
-
-export const unsetUser = (index) => {
-    return {
-        type: 'UNSET_USER',
-        value: index
-    }
-}
